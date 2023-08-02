@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+  <Comment CommentText="PieceDef: An abstract class that defines a piece type. Each subclass has a piece ID (1-15), critical flag (controls if piece can be captured), piece sprite and two overriden functions defining move behaviour, isValidMove and MakeMove. ">
+    <Position X="4.448" Y="0.5" Height="1.302" Width="2.294" />
+  </Comment>
+  <Comment CommentText="PieceDef for a chess pawn.">
+    <Position X="2.635" Y="3.583" Height="0.354" Width="1.7" />
+  </Comment>
+  <Comment CommentText="PieceDef for a chess king.">
+    <Position X="0.5" Y="3.604" Height="0.354" Width="1.7" />
+  </Comment>
+  <Comment CommentText="PieceDef for a piece that moves in a linear path along some direction vectors. This can be used to create any kind of piece moveset, allowing to easily define the knight, bishop, rook and queen.">
+    <Position X="4.875" Y="3.573" Height="1.479" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Simple struct to simplify operations on 8x8 byte arrays, used for storing graphic sprites, board, etc.">
+    <Position X="9.156" Y="0.5" Height="0.917" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Subclass of Byte88 to deal with board of pieces. Adds functions getPiece and setPiece.">
+    <Position X="9.156" Y="1.75" Height="0.917" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Bitfield struct to store on-board piece information in a single byte.">
+    <Position X="9.208" Y="3.188" Height="0.698" Width="1.627" />
+  </Comment>
+  <Comment CommentText="Defines the different symmetry modes to apply on a UnitMovePiece.">
+    <Position X="4.896" Y="5.927" Height="0.656" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Encodes the colormap indices used in ChessGame.">
+    <Position X="9.24" Y="4.281" Height="0.521" Width="1.731" />
+  </Comment>
+  <Comment CommentText="Defined the different game states in chess (game in progess, check/stale-mate, pawn promotion)">
+    <Position X="9.24" Y="5.125" Height="0.844" Width="1.731" />
+  </Comment>
+  <Comment CommentText="Encodes the drawing layer indices used in ChessGame.">
+    <Position X="9.208" Y="6.271" Height="0.5" Width="1.731" />
+  </Comment>
+  <Comment CommentText="EVENT_PROC: typedef for function pointer types for different events">
+    <Position X="2.177" Y="5.719" Height="0.646" Width="1.731" />
+  </Comment>
+  <Comment CommentText="Struct implementing a 2D vector with integer components.">
+    <Position X="12.677" Y="0.5" Height="0.531" Width="2.085" />
+  </Comment>
+  <Comment CommentText="Store a dynamic size graphics layer and implement operations to overlay/index/etc.">
+    <Position X="12.667" Y="1.5" Height="0.656" Width="2.085" />
+  </Comment>
+  <Comment CommentText="Class responsible for handling drawing to screen and color, layer and console management.">
+    <Position X="12.677" Y="2.438" Height="0.656" Width="2.085" />
+  </Comment>
+  <Comment CommentText="Main class representing an interactive chess game, created from PieceDef pointers and an initial BoardState. Implements all high-level game logic and rules.">
+    <Position X="12.656" Y="3.448" Height="0.969" Width="2.085" />
+  </Comment>
+  <Class Name="King" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgCAAAAAAAAIAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>King.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pawn" Collapsed="true">
+    <Position X="2.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAIAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Pawn.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Layer" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAYAAAAAAAIAQAQIAAAJAAAAEEAAAERQhiAAAAAAA=</HashCode>
+      <FileName>Layer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessGame" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYAAQAAAwcAAIBABAIhBAAQA4BAAAEIIIAIgAAAAAAA=</HashCode>
+      <FileName>ChessGame.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameWindow" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACABAwAkBAwAUAAAAIkgAQIBgAAAQAECDAAIBAA=</HashCode>
+      <FileName>GameWindow.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnitMovePiece" Collapsed="true">
+    <Position X="5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEIAAAgAAAAAAAAAAAAgAQAA=</HashCode>
+      <FileName>UnitMovePiece.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PieceDef" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAABAAAAAAIAAABAAAAAAAAIAAAAAAgA=</HashCode>
+      <FileName>PieceDef.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Piece" Collapsed="true">
+    <Position X="7.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAIAAQAAAAAAAAYAAgAgA=</HashCode>
+      <FileName>BoardState.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="BoardState" Collapsed="true">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAiAAAAAAAAA=</HashCode>
+      <FileName>BoardState.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="IVec2" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACABACCAQAAAAAAEAAEAABgAAAAAAA=</HashCode>
+      <FileName>IVec2.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Byte88" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAACAAwAAAAEAAAAAAAAwAAAABQA=</HashCode>
+      <FileName>Byte88.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Typedef Name="KEY_EVENT_PROC" Collapsed="true">
+    <Position X="2.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameWindow.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="MOUSE_EVENT_PROC" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameWindow.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="MENU_EVENT_PROC" Collapsed="true">
+    <Position X="2.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameWindow.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="FOCUS_EVENT_PROC" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameWindow.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="BUFFER_EVENT_PROC" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameWindow.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Enum Name="ChessColor" Collapsed="true">
+    <Position X="7.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAEIAAAEAABAAAAABSAAIAACAAAAAAAAAACgAAAA=</HashCode>
+      <FileName>ChessGame.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Layers" Collapsed="true">
+    <Position X="7.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAACAAAABAAAAAAAAgAAACAQAQA=</HashCode>
+      <FileName>ChessGame.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GameState" Collapsed="true">
+    <Position X="7.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAACAAAAAAAAAAAAgAAAAAAAAABAAAAA=</HashCode>
+      <FileName>ChessGame.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MoveSymmetry" Collapsed="true">
+    <Position X="5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAIAAAAAAAggAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>UnitMovePiece.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
